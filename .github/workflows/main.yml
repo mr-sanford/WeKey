@@ -13,7 +13,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            cd wekey
+            cd /home/wk/wekey
             sudo git pull
             sudo systemctl restart wekey
 #            pip install -r requirements.txt
