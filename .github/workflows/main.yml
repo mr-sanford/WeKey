@@ -14,7 +14,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd wekey
-            git pull
+            sudo git pull
             sudo systemctl restart wekey
 #            pip install -r requirements.txt
 #            sudo systemctl restart nginx
