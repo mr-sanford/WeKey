@@ -67,7 +67,7 @@ def ucar():  # put application's code here
 
 @app.route('/notes')
 def notes():  # put application's code here
-    notes_article = db.session.query(Record).filter_by(part="notes").order_by(Record.type_sort)
+    notes_article = db.session.query(Record).filter_by(part="notes").order_by(desc(Record.type_sort))
     return render_template('notes.html', notes_article=notes_article)
 
 @app.route('/notes/<string:cat>/<string:subcat>')
